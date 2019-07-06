@@ -36,17 +36,18 @@ class Example extends Component {
 }
 ```
 ### props
+***All props are not require***
 | props  |  type  | description  |   
 |---|---|---|
-|  label |  string  |    |   
-|  accepts |  array of string    |   |   
-|  multiple | boolen     |   |   
-| maxFiles  |    number  |   |   
-|maxFileSize |    number  |   |   
-| minFileSize    |   number |   |   
-|  color |  string    |   |   
-|  onError |  method    |   |   
-|  onChange |   method   |   |   
+|  label |  string  |  the label that should diplay in upload button  |   
+|  accepts |  array of string    | array of accepted  type of file ['image/png', '.pdf', 'audio/*', ...]  |   
+|  multiple | boolen     |  multifile or not |   
+| maxFiles  |    number  |  if multiple you can add the maximum of number of files   |   
+|maxFileSize |    number  |  maximum file size  |   
+| minFileSize    |   number |  minimum file size |   
+|  color |  string    |  the color of the upload button  |   
+|  onError |  method    |   executing  when an error happen|   
+|  onChange |   method   |  executing when file uploaded |   
 
 
 ## License
