@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import UploadFile from 'yagoubi-upload-file'
+import UploadFile from "yagoubi-upload-file";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <UploadFile
-          />
+        <UploadFile multiple id="fileupload" />
       </div>
-    )
+    );
   }
 }

@@ -20,6 +20,7 @@ export default class UploadFile extends Component {
     return accepts.filter(a => a === accept).length > 0;
   };
   onchange = file => {
+    
     let files = [...this.state.files];
     if (!this.props.multiple) {
       files = [];
@@ -277,10 +278,12 @@ export default class UploadFile extends Component {
       maxFileSize,
       minFileSize,
       label,
-      color
+      color,
+      id
     } = this.props;
     label = label ? label : "upload file ..";
     color = color ? color : "#0074D9";
+    id = id ? id : (new Date().getTime()).toString(36);
 
     return (
       <div className={styles["btn-upload-container"]}>
@@ -288,7 +291,7 @@ export default class UploadFile extends Component {
           className={styles["btn-upload"]}
           style={{ backgroundColor: color }}
         >
-          <label htmlFor="fileupload">
+          <label htmlFor={id}>
             <img src={PublishIcon} className={styles["svg-icon"]} />
             <span>{label}</span>
           </label>
@@ -297,7 +300,8 @@ export default class UploadFile extends Component {
           type="file"
           onChange={ref => this.onchange(ref.target.files)}
           style={{ display: "none" }}
-          id="fileupload"
+          id={id}
+         
         />
         <div className={styles["files-container"]}>
           {this.state.files.length > 0 ? (
@@ -315,16 +319,11 @@ export default class UploadFile extends Component {
               );
             })
           ) : (
-            <label htmlFor="fileupload" className={styles["placeholder"]}>
+            <label htmlFor={id} className={styles["placeholder"]}>
               {label}
             </label>
           )}
-          {/**  <div className={styles["file"]}>
-            <span className={styles["file-name"]}>translate.txt</span>
-            <span className={styles["file-close"]}>
-              <img src={CloseIcon} />
-            </span>
-          </div> */}
+         
         </div>
       </div>
     );

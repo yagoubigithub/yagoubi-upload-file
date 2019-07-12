@@ -1,8 +1,12 @@
-# yagou-upload-file
+# yagoubi-upload-file
 
 > 
 
 [![NPM](https://img.shields.io/npm/v/@yagoubi/upload-file.svg)](https://www.npmjs.com/package/yagoubi-upload-filee) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## Demo
+### [yagoubi-upload-file](https://thirsty-saha-6eeabb.netlify.com/)
+
+
 
 ## Install
 
@@ -36,7 +40,10 @@ class Example extends Component {
 }
 ```
 ### props
-***All props are not require***
+
+##### All props are not require
+
+
 | props  |  type  | description  |   
 |---|---|---|
 |  label |  string  |  the label that should diplay in upload button  |   
